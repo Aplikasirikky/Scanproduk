@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scan QR dan Baca File XLSX</title>
+    <title>Scan QR dan Baca File CSV</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
-    <script src="xlsx.full.min.js"></script>
 </head>
 <body>
-    <h1>Scan QR Code dan Baca File XLSX</h1>
+    <h1>Scan QR Code dan Baca File CSV</h1>
     
-    <input type="file" id="fileInput" accept=".xlsx" />
+    <input type="file" id="fileInput" accept=".csv" />
     <button id="uploadBtn">Unggah dan Baca File</button>
 
-    <div id="reader" style="width:500px"></div>
+    <div id="reader" style="width:500px;"></div>
     <button id="stop">Stop Scan</button>
     
-    <h2>Data dari File XLSX:</h2>
+    <h2>Data dari File CSV:</h2>
     <pre id="output"></pre>
 
     <script src="script.js"></script>
