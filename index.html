@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scan QR dan Baca File CSV</title>
+    <title>Scanner Barcode Barang</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Scan QR Code dan Baca File CSV</h1>
-    
-    <input type="file" id="fileInput" accept=".csv" />
-    <button id="uploadBtn">Unggah dan Simpan Data</button>
-    <button id="scanBtn" style="display:none;">Mulai Scan QR Code</button>
-
-    <div id="reader" style="width:500px; display:none;"></div>
-    <button id="stop" style="display:none;">Stop Scan</button>
-    
-    <h2>Data dari File CSV:</h2>
-    <pre id="output"></pre>
-
-    <!-- Area untuk notifikasi -->
-    <div id="notification" style="display:none; padding: 10px; margin-top: 20px; border: 1px solid #007bff; background-color: #e7f3ff; color: #31708f;"></div>
-
-    <script src="script.js"></script>
+    <h1>Scanner Barcode Barang</h1>
+    <input type="file" id="csvFile" accept=".csv" />
+    <button id="uploadBtn">Unggah CSV</button>
+    <button id="scanBtn">Scan Barcode</button>
+    <video id="video" width="300" autoplay style="display:none;"></video>
+    <canvas id="canvas" width="300" height="200" style="display:none;"></canvas>
+    <div id="output"></div>
 </body>
 </html>
